@@ -1,16 +1,16 @@
 {
-  "name": "firstmern",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "firstmern", // Name of your project
+  "version": "1.0.0", // Version of your project
+  "main": "index.js", // Entry point of your application
   "scripts": {
-     "start": "index.js",
-  "dev": "index.js"
+    "start": "node index.js", // Command to start your application in production
+    "dev": "nodemon index.js" // Command to start your application in development with nodemon
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
+  "keywords": [], // Keywords related to your project
+  "author": "", // Author of the project
+  "license": "ISC", // License type for your project
+  "description": "", // Description of your project
+  "dependencies": { // Dependencies required for your project to run
     "cloudinary": "^2.1.0",
     "cookie-parser": "^1.4.6",
     "cores": "^0.8.5",
@@ -23,7 +23,7 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0"
   },
-  "devDependencies": {
+  "devDependencies": { // Dependencies required only for development purposes
     "nodemon": "^3.1.0"
   }
 }
