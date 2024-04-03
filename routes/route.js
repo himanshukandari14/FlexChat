@@ -7,7 +7,7 @@ const { register, login, getLoggedInUser, logout} = require('../controllers/Auth
 const User = require('../models/User');
 const Post=require('../models/Post');
 const { createPost, getAllPosts, likePost } = require('../controllers/Post');
-const { updateProfile, visitUser, getUserProfile } = require('../controllers/User');
+const { updateProfile, visitUser, getUserProfile, searchUsers, follow } = require('../controllers/User');
 
 // Register a new user
 router.post('/register', register);
@@ -49,8 +49,11 @@ router.get('/test',verifyToken,async (req,res)=>{
 
 router.post('/posts/like/:id',verifyToken,likePost);
 router.post('/users/profile-picture',verifyToken,updateProfile);
-router.get('/profile/:userId',verifyToken,getUserProfile);
 
+router.get('/user/search',verifyToken,searchUsers); 
+router.post('/follow/:id',verifyToken,follow)
+
+router.get('/user/profile/:userId',verifyToken,getUserProfile);
 router.get('/logout',logout);
 module.exports = router;
 

@@ -1,5 +1,8 @@
 const express=require('express');
 const app=express();
+
+// socket io
+
 const cookieParser = require('cookie-parser');
 const fileUpload=require('express-fileupload');
 var cors=require('cors')
@@ -32,6 +35,8 @@ app.use('/api/v1',routes);
 
 // db
 dbConnection();
+
+
 
 // deafult route
 app.get('/',(req,res)=>{
